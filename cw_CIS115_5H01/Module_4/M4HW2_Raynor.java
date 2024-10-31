@@ -38,7 +38,7 @@ public class M4HW2_Raynor {
                     System.out.println("You aren't serving a felony sentence or on probation. You are eligible to vote");
                 }
 
-                    System.out.print("How you live in the U.S. for 30 days? Enter yes or no: ");
+                    System.out.print("Have you live in the U.S. for 30 days? Enter yes or no: ");
                     county=k.next();
                     if(county.equalsIgnoreCase("yes")){
                         System.out.print("You pass the 30 day requirements. You are eligible to vote");
