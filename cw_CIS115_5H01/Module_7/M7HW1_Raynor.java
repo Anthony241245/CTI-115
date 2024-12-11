@@ -25,6 +25,7 @@ public class M7HW1_Raynor
                 int widgetsReturned = getReturns();
                 int netWidgetsSold = calWidSold(widgetsSold, widgetsReturned);
                 System.out.println(netWidgetsSold);
+                displayValues(netWidgetsSold, widgetsReturned, netWidgetsSold, widgetsSold, widgetsReturned, netWidgetsSold);
                 // all calls to your function/methods should come from runProgram()  method only
                 System.out.println();
                 System.out.print("Do you want to run the program again? Enter yes or no: ");
@@ -75,6 +76,32 @@ public class M7HW1_Raynor
     {
         return widgetsSold - widgetsReturned;
 
+    }
+    public static double calWidSalesAmt(double netWidgetsSold) {
+        double widgetPrice = 10.00;  
+        return netWidgetsSold * widgetPrice;
+    }
+    public static double calComm(double netWidgetsSold, double salesAmount) {
+        double commissionRate = 0.05; 
+        if (netWidgetsSold >= 100) {
+            commissionRate = 0.10;  
+        } else if (netWidgetsSold < 50) {
+            commissionRate = 0.03;  
+        }
+        return salesAmount * commissionRate;
+    }
+    public static double calSalary(double commission) {
+        double baseSalary = 2000;  
+        return baseSalary + commission;
+    }
+    public static void displayValues(double sales, double returns, double netWidgetsSold, double salesAmount, double commission, double totalSalary) {
+        
+        System.out.println("Weekly Sales Amount "+ sales);
+        System.out.println("Weekly Returns Amount:"+ returns);
+        System.out.println("Net Widgets Sold:"+ netWidgetsSold);
+        System.out.println("Total Sales Amount:"+ salesAmount);
+        System.out.println("Commission Earned: "+ commission);
+        System.out.println("Total Monthly Salary:"+ totalSalary);
     }
 }
 
