@@ -77,11 +77,13 @@ public class M7HW1_Raynor
         return widgetsSold - widgetsReturned;
 
     }
-    public static double calWidSalesAmt(double netWidgetsSold) {
+    public static double calWidSalesAmt(double netWidgetsSold) 
+    {
         double widgetPrice = 10.00;  
         return netWidgetsSold * widgetPrice;
     }
-    public static double calComm(double netWidgetsSold, double salesAmount) {
+    public static double calComm(double netWidgetsSold, double salesAmount) 
+    {
         double commissionRate = 0.05; 
         if (netWidgetsSold >= 100) {
             commissionRate = 0.10;  
@@ -90,12 +92,13 @@ public class M7HW1_Raynor
         }
         return salesAmount * commissionRate;
     }
-    public static double calSalary(double commission) {
+    public static double calSalary(double commission) 
+    {
         double baseSalary = 2000;  
         return baseSalary + commission;
     }
-    public static void displayValues(double sales, double returns, double netWidgetsSold, double salesAmount, double commission, double totalSalary) {
-        
+    public static void displayValues(double sales, double returns, double netWidgetsSold, double salesAmount, double commission, double totalSalary) 
+    {
         System.out.println("Weekly Sales Amount "+ sales);
         System.out.println("Weekly Returns Amount:"+ returns);
         System.out.println("Net Widgets Sold:"+ netWidgetsSold);
